@@ -56,12 +56,11 @@
     },
   ],
   // R2 bucket for persistent storage (moltbot data, conversations, etc.)
-  "r2_buckets": [
-    {
-      "binding": "MOLTBOT_BUCKET",
-      "bucket_name": "moltbot-data",
-    },
-  ],
+   "r2_buckets": [
+  { "binding": "MOLTBOT_BUCKET", "bucket_name": "moltbot-data" },
+  { "binding": "WORKSPACE_BUCKET", "bucket_name": "code" },
+  { "binding": "OBSIDIAN_BUCKET", "bucket_name": "obsidian" }
+],
 
   // Browser Rendering binding for CDP shim
   "browser": {

@@ -14,10 +14,10 @@ Run [OpenClaw](https://github.com/openclaw/openclaw) (formerly Moltbot, formerly
 - [Anthropic API key](https://console.anthropic.com/) — for Claude access, or you can use AI Gateway's [Unified Billing](https://developers.cloudflare.com/ai-gateway/features/unified-billing/)
 
 The following Cloudflare features used by this project have free tiers:
-- Cloudflare Access (authentication)
-- Browser Rendering (for browser navigation)
-- AI Gateway (optional, for API routing/analytics)
-- R2 Storage (optional, for persistence)
+- Cloudflare Access (authentication) done
+- Browser Rendering (for browser navigation) need 
+- AI Gateway (optional, for API routing/analytics) done
+- R2 Storage (optional, for persistence) done
 
 ## Container Cost Estimate
 

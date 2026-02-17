@@ -36,7 +36,6 @@ export interface MoltbotEnv {
   N8N_API_KEY?: string; 
   APIFY_X_API_KEY?: string; 
   APIFY_YT_API_KEY?: string; 
-  OPENAI_API_KEY?: string;
   GITHUB_TOKEN?: string;
   WP_APP_PASSWORD?: string;
   WP_USER?: string;

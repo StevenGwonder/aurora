@@ -30,6 +30,17 @@ export interface MoltbotEnv {
   DISCORD_DM_POLICY?: string;
   SLACK_BOT_TOKEN?: string;
   SLACK_APP_TOKEN?: string;
+  // G Wonder Tokens
+  BRAVE_API_KEY?: string;
+  TAVILY_API_KEY?: string;
+  N8N_API_KEY?: string; 
+  APIFY_X_API_KEY?: string; 
+  APIFY_YT_API_KEY?: string; 
+  OPENAI_API_KEY?: string;
+  GITHUB_TOKEN?: string;
+  WP_APP_PASSWORD?: string;
+  WP_USER?: string;
+  WP_URL?: string;
   // Cloudflare Access configuration for admin routes
   CF_ACCESS_TEAM_DOMAIN?: string; // e.g., 'myteam.cloudflareaccess.com'
   CF_ACCESS_AUD?: string; // Application Audience (AUD) tag

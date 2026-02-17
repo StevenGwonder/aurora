@@ -101,6 +101,21 @@ describe('buildEnvVars', () => {
     expect(result.OPENCLAW_GATEWAY_TOKEN).toBe('my-token');
   });
 
+  it('passes OPENCLAW_GATEWAY_TOKEN through directly', () => {
+    const env = createMockEnv({ OPENCLAW_GATEWAY_TOKEN: 'openclaw-token' });
+    const result = buildEnvVars(env);
+    expect(result.OPENCLAW_GATEWAY_TOKEN).toBe('openclaw-token');
+  });
+
+  it('prefers OPENCLAW_GATEWAY_TOKEN when both token names are set', () => {
+    const env = createMockEnv({
+      MOLTBOT_GATEWAY_TOKEN: 'legacy-token',
+      OPENCLAW_GATEWAY_TOKEN: 'new-token',
+    });
+    const result = buildEnvVars(env);
+    expect(result.OPENCLAW_GATEWAY_TOKEN).toBe('new-token');
+  });
+
   // Channel tokens
   it('includes all channel tokens when set', () => {
     const env = createMockEnv({

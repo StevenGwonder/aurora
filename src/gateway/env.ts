@@ -54,6 +54,18 @@ export function buildEnvVars(env: MoltbotEnv): Record<string, string> {
   if (env.R2_ACCESS_KEY_ID) envVars.R2_ACCESS_KEY_ID = env.R2_ACCESS_KEY_ID;
   if (env.R2_SECRET_ACCESS_KEY) envVars.R2_SECRET_ACCESS_KEY = env.R2_SECRET_ACCESS_KEY;
   if (env.R2_BUCKET_NAME) envVars.R2_BUCKET_NAME = env.R2_BUCKET_NAME;
+  
+  // Custom integration keys (passed into the OpenClaw container)
+  // NOTE: Anything you pass here becomes a real env var in the container.
+  if (env.BRAVE_API_KEY) envVars.BRAVE_API_KEY = env.BRAVE_API_KEY;
+  if (env.TAVILY_API_KEY) envVars.TAVILY_API_KEY = env.TAVILY_API_KEY;
+  if (env.N8N_API_KEY) envVars.N8N_API_KEY = env.N8N_API_KEY;
+  if (env.APIFY_X_API_KEY) envVars.APIFY_X_API_KEY = env.APIFY_X_API_KEY;
+  if (env.APIFY_YT_API_KEY) envVars.APIFY_YT_API_KEY = env.APIFY_YT_API_KEY;
+  if (env.GITHUB_TOKEN) envVars.GITHUB_TOKEN = env.GITHUB_TOKEN;
+  if (env.WP_APP_PASSWORD) envVars.WP_APP_PASSWORD = env.WP_APP_PASSWORD;
+  if (env.WP_USER) envVars.WP_USER = env.WP_USER;
+  if (env.WP_URL) envVars.WP_URL = env.WP_URL;
 
   return envVars;
 }
